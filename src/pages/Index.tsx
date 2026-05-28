@@ -34,7 +34,7 @@ function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass border-b border-dark-border" : ""}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         <a href="#hero" className="flex items-center">
-          <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-10 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+          <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-10 w-auto object-contain" />
         </a>
 
         <div className="hidden lg:flex items-center gap-6">
@@ -712,7 +712,7 @@ function About() {
         <div className="grid xl:grid-cols-2 gap-16 mb-16">
           <div>
             <div className="tech-tag mb-4 inline-block">О компании</div>
-            <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-16 w-auto object-contain mb-6" style={{ filter: "brightness(0) invert(1)" }} />
+            <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-16 w-auto object-contain mb-6" />
             <p className="text-gray-400 leading-relaxed mb-4">
               Основана в 2014 году как строительная компания. В 2019 году запустили собственный ИТ-отдел и начали цифровизацию объектов. Сегодня мы — единственная компания в Екатеринбурге, предоставляющая полный цикл: от проекта до «умного дома».
             </p>
@@ -932,7 +932,7 @@ function Contacts() {
               {[
                 { icon: "Mail", label: "info@neo-vision.ru" },
                 { icon: "MessageCircle", label: "WhatsApp: +7 (900) 000-00-00" },
-                { icon: "Send", label: "Telegram: @neovision_ekb" },
+                { icon: "Send", label: "Telegram: @neoltd" },
               ].map((c) => (
                 <div key={c.label} className="flex items-center gap-3 text-gray-400 text-sm">
                   <Icon name={c.icon as any} size={16} className="text-neon" />
@@ -966,7 +966,7 @@ function Footer() {
     <footer className="border-t border-dark-border py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-8 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
+          <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-8 w-auto object-contain" />
           <p className="text-gray-600 text-sm text-center">
             © 2026 ООО «Нео-Вижен». Строительство и ИТ-решения, Екатеринбург.
           </p>
