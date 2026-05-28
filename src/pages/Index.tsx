@@ -930,8 +930,8 @@ function Contacts() {
             <h3 className="font-semibold text-white mb-4">Онлайн-каналы</h3>
             <div className="space-y-3">
               {[
-                { icon: "Mail", label: "info@neo-vision.ru" },
-                { icon: "MessageCircle", label: "WhatsApp: +7 (900) 000-00-00" },
+                { icon: "Mail", label: "neo-vision@inbox.ru" },
+                { icon: "MessageCircle", label: "WhatsApp: +7 (914) 372-25-25" },
                 { icon: "Send", label: "Telegram: @neoltd" },
               ].map((c) => (
                 <div key={c.label} className="flex items-center gap-3 text-gray-400 text-sm">
@@ -953,6 +953,33 @@ function Contacts() {
                 Открыть карту
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Реквизиты */}
+        <div className="mt-6 bg-dark-card rounded-2xl border border-dark-border p-6">
+          <h3 className="font-semibold text-white mb-5 flex items-center gap-2">
+            <Icon name="FileText" size={16} className="text-neon" />
+            Реквизиты компании
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+            {[
+              { label: "Полное наименование", value: "ООО «Нео-Вижен»" },
+              { label: "Телефон", value: "8 (914) 372-25-25" },
+              { label: "E-mail", value: "neo-vision@inbox.ru" },
+              { label: "ИНН", value: "6679188360" },
+              { label: "КПП", value: "667901001" },
+              { label: "ОГРН", value: "1269600001384" },
+              { label: "БИК", value: "046577964" },
+              { label: "К/С", value: "30101810100000000964" },
+              { label: "Р/С", value: "40702810638230008665" },
+              { label: "Банк", value: "Филиал «Екатеринбургский» АО «Альфа-Банк», г. Екатеринбург", wide: true },
+            ].map((r) => (
+              <div key={r.label} className={(r as any).wide ? "sm:col-span-2 lg:col-span-3" : ""}>
+                <span className="text-gray-600 text-xs block">{r.label}</span>
+                <span className="text-gray-300 text-sm font-medium">{r.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
