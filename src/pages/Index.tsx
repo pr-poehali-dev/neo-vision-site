@@ -33,11 +33,8 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass border-b border-dark-border" : ""}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#hero" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded bg-neon flex items-center justify-center">
-            <span className="font-display font-bold text-dark-bg text-sm">НВ</span>
-          </div>
-          <span className="font-display font-bold text-white text-lg tracking-wide">НЕО-ВИЖЕН</span>
+        <a href="#hero" className="flex items-center">
+          <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-10 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
         </a>
 
         <div className="hidden lg:flex items-center gap-6">
@@ -960,12 +957,7 @@ function Footer() {
     <footer className="border-t border-dark-border py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded bg-neon flex items-center justify-center">
-              <span className="font-display font-bold text-dark-bg text-xs">НВ</span>
-            </div>
-            <span className="font-display font-bold text-white">НЕО-ВИЖЕН</span>
-          </div>
+          <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-8 w-auto object-contain" style={{ filter: "brightness(0) invert(1)" }} />
           <p className="text-gray-600 text-sm text-center">
             © 2026 ООО «Нео-Вижен». Строительство и ИТ-решения, Екатеринбург.
           </p>
