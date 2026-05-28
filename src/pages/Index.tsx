@@ -759,15 +759,33 @@ function About() {
   );
 }
 
+const SEND_CONSULT_URL = "https://functions.poehali.dev/a122e580-f427-4545-9803-87577eb3f5af";
+
 // ── Consult Form ──────────────────────────────────────────────────────────────
 function ConsultForm() {
   const [direction, setDirection] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", phone: "", task: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(SEND_CONSULT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, direction }),
+      });
+      if (!res.ok) throw new Error("Ошибка отправки");
+      setSubmitted(true);
+    } catch {
+      setError("Не удалось отправить заявку. Попробуйте позвонить нам напрямую.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -849,9 +867,15 @@ function ConsultForm() {
                 />
               </div>
 
-              <button type="submit" className="btn-gold w-full py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2">
-                <Icon name="Send" size={18} />
-                Отправить заявку
+              {error && (
+                <div className="bg-red-900/20 border border-red-500/30 rounded-xl px-4 py-3 text-red-400 text-sm">
+                  {error}
+                </div>
+              )}
+
+              <button type="submit" disabled={loading} className="btn-gold w-full py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                <Icon name={loading ? "Loader" : "Send"} size={18} className={loading ? "animate-spin" : ""} />
+                {loading ? "Отправляем..." : "Отправить заявку"}
               </button>
 
               <p className="text-gray-600 text-xs text-center">
