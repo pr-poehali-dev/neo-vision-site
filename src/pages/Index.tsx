@@ -700,10 +700,7 @@ function About() {
         <div className="grid xl:grid-cols-2 gap-16 mb-16">
           <div>
             <div className="tech-tag mb-4 inline-block">О компании</div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-              ООО<br />
-              <span className="neon-text">«НЕО-ВИЖЕН»</span>
-            </h2>
+            <img src="https://cdn.poehali.dev/projects/92d02ca1-0bdd-44ca-ab36-98f14d8745e6/bucket/d6e6281f-78aa-4a8d-acf1-215c6f56d717.png" alt="Нео-Вижен" className="h-16 w-auto object-contain mb-6" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-gray-400 leading-relaxed mb-4">
               Основана в 2014 году как строительная компания. В 2019 году запустили собственный ИТ-отдел и начали цифровизацию объектов. Сегодня мы — единственная компания в Екатеринбурге, предоставляющая полный цикл: от проекта до «умного дома».
             </p>
