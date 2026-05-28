@@ -221,6 +221,13 @@ function Construction() {
       price: "по смете",
       tags: ["Монтаж", "Пусконаладка"],
     },
+    {
+      icon: "Bolt",
+      title: "Объекты энергетики",
+      desc: "Строительство подстанций, трансформаторных пунктов, линий электропередачи, объектов возобновляемой энергетики.",
+      price: "по смете",
+      tags: ["ЛЭП", "Подстанции", "ВИЭ"],
+    },
   ];
 
   const projects = [
@@ -246,7 +253,7 @@ function Construction() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-16">
           {services.map((s) => (
             <div key={s.title} className="bg-dark-card rounded-2xl border border-dark-border p-6 card-hover flex flex-col gap-4">
               <div className="w-12 h-12 rounded-xl bg-neon/10 border border-neon/20 flex items-center justify-center">
@@ -299,6 +306,11 @@ function ITSolutions() {
     { icon: "Layers", title: "Цифровые двойники", desc: "Виртуальная копия здания для мониторинга инженерных систем и планирования ТО.", color: "gold" },
     { icon: "Cloud", title: "Облачный документооборот", desc: "Хранение проектной документации, согласование и контроль версий онлайн.", color: "neon" },
     { icon: "Shield", title: "Кибербезопасность", desc: "Защита строительных данных, разграничение прав доступа, аудит безопасности.", color: "neon" },
+    { icon: "Smartphone", title: "Мобильные приложения", desc: "Разработка приложений для прорабов, заказчиков и инспекторов: фотоотчёты, задачи, контроль сроков — всё в смартфоне.", color: "gold" },
+    { icon: "BarChart3", title: "Аналитика и отчётность", desc: "Дашборды и BI-системы для руководителей: ключевые показатели стройки в реальном времени.", color: "neon" },
+    { icon: "ScanLine", title: "Геодезия и 3D-сканирование", desc: "Лазерное сканирование объектов, создание точных облаков точек и обмерных чертежей.", color: "gold" },
+    { icon: "GitBranch", title: "Интеграции и API", desc: "Подключение строительного ПО к ERP, CRM и государственным системам (ЕГРН, ГИС ЖКХ).", color: "neon" },
+    { icon: "MonitorSmartphone", title: "Веб-порталы для объектов", desc: "Личный кабинет для заказчика: онлайн-мониторинг хода строительства, документы, финансы.", color: "gold" },
   ];
 
   return (
