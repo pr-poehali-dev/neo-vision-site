@@ -911,8 +911,8 @@ function Contacts() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {[
-            { icon: "MapPin", title: "Адрес", lines: ["г. Екатеринбург", "ул. Чемпионов, д. 5, кв. 88"] },
-            { icon: "Phone", title: "Телефоны", lines: ["Строительство: +7 (343) 000-01-11", "ИТ-отдел: +7 (343) 000-01-22"] },
+            { icon: "MapPin", title: "Адрес", lines: ["г. Екатеринбург", "ул. Чемпионов, д. 5"] },
+            { icon: "Phone", title: "Телефоны", lines: ["+7 (914) 372-25-25 — основной", "+7 (995) 565-63-30 — автоответчик"] },
             { icon: "Clock", title: "Часы работы", lines: ["Пн–Пт: 9:00–18:00", "Сб–Вс: по договорённости"] },
           ].map((c) => (
             <div key={c.title} className="bg-dark-card rounded-2xl border border-dark-border p-6 card-hover">
